@@ -1,0 +1,93 @@
+.general {
+  background-color: black;
+  height: 1920px;
+}
+
+.container{
+  background-color: white;
+  border: 2px solid black;
+  height: 100px;
+}
+
+.header1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.aside{
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+
+.container_card {
+  background-color: white;
+  height: 560px;
+  width: 320px;
+  border-radius: 20px;
+}
+
+.video{
+  position: relative;
+  overflow: hidden;
+  margin: 2px 2px;
+  border-radius: 20px;
+  /* border: 2px solid red; */
+  height: 440px;
+  width: auto;
+  background-image: none;
+}
+
+.reproductor {
+   width:100%;
+   height:100%;
+   position:absolute;
+   top:0;
+   bottom:0;
+}
+
+
+.position-footer{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+.reverse{
+  cursor: pointer;
+}
+
+.forward{
+  cursor: pointer;
+}
+
+.position-like{
+  display: flex;
+  justify-content: end;
+  margin-top: -41px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+.like{
+  border: none;
+  color: red;
+  background-color: transparent;
+  font-size: x-large;
+  cursor: pointer;
+}
+.song{
+  margin: 3px;
+  border: 2px solid blue;
+  font-size: 12px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
