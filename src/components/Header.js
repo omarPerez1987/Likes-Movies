@@ -3,9 +3,14 @@ import logoLikes from './imagenes/logoL&M.png'
 
 function Header() {
     return (
-        <div className="header1">
-            <img className='logo' alt='logo' src={logoLikes}></img>
-        </div>
+        <header>
+            <div className="item1">
+                <img className='logo' alt='logo' src={logoLikes}></img>
+            </div>
+            <div>
+                <a className='inicio-sesion' href='#'>Inicio sesión</a>
+            </div>
+        </header>
     )
 }
 

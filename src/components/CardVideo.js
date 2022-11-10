@@ -11,7 +11,7 @@ function CardVideo () {
     
     
     const resPorPagina = 10;
-    const key = process.env.REACT_APP_API_KEY;
+    const key = process.env.REACT_APP_API_KEY2;
     const idCanal = process.env.REACT_APP_ID_CANAL;
     
     
@@ -60,7 +60,7 @@ function CardVideo () {
                     <div className="video">
 
                         <iframe className='reproductor' src={`https://www.youtube.com/embed/${videoApi}?modestbranding=1&rel=0&showinfo=0`}
-                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        title={titleApi} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                         gyroscope; picture-in-picture" allowfullscreen
                         ></iframe> 
                         
@@ -69,10 +69,9 @@ function CardVideo () {
                     <div className='position-footer'>
                         <button onClick={disminuir} className="reverse">◀</button>
                         <button onClick={aumentar} className="forward">▶</button>
-                        </div>
-                        <div className='position-like'>
-                            <button className="like">❤</button>
-                        </div>
+                        <button className="like">❤</button>
+                    </div>
+            
                     <h4 className="title" key={titleApi} >🎬... {titleApi}</h4>
                 </div>
             </div>
