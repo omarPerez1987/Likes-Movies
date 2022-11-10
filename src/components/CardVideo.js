@@ -2,10 +2,6 @@
 import React, {useEffect, useState} from 'react';
 
 
-
-
-
-
 function CardVideo () {
     
     const [stateNumber, setStateNumber] = useState(0)
@@ -15,8 +11,8 @@ function CardVideo () {
     
     
     const resPorPagina = 10;
-    const key = 'AIzaSyBZr-Opi5P208BPq362l0ghTghrB-sKxSc';
-    const idCanal = 'UCsbrGZQjM3NiA_eYsguRMNQ';
+    const key = process.env.REACT_APP_API_KEY;
+    const idCanal = process.env.REACT_APP_ID_CANAL;
     
     
     const url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${idCanal}&part=snippet,id&order=date&maxResults=${resPorPagina}`
@@ -37,13 +33,15 @@ function CardVideo () {
         const FetchApi = async () => {
             const response = await fetch(url);
             const data = await response.json();
+
+            console.log(data)
             
             setStateNumber(stateNumber)
             
             
             
             let containerVideo = `${data.items[stateNumber].id.videoId}`;
-            let containerTitle = `${data.items[stateNumber].snippet.description}`
+            let containerTitle = `${data.items[stateNumber].snippet.title}`
             
             setVideoApi(containerVideo)
             setTitleApi(containerTitle)
@@ -75,7 +73,7 @@ function CardVideo () {
                         <div className='position-like'>
                             <button className="like">❤</button>
                         </div>
-                    <h4 className='song' key={titleApi} >🎶... {titleApi}</h4>
+                    <h4 className='song' key={titleApi} >🎬... {titleApi}</h4>
                 </div>
             </div>
         </div>
