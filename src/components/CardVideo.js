@@ -82,9 +82,3 @@ function CardVideo () {
 }
 
 export default CardVideo
-
-
-// api key youtube 1 = AIzaSyAP-JUbwMpTQDlLyEgBYB8O9y7uxOZO65o
-// api key youtube 2 = AIzaSyAw1P7kP-OeN3M5wt-7kAkw7VQb6sfA8rE
-// api key youtube 3 = AIzaSyAonouPad4lqaqXo2MBrmhKAn21DKdZmQk
-// api key youtube 4 = AIzaSyBZr-Opi5P208BPq362l0ghTghrB-sKxSc
