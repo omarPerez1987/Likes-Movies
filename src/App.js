@@ -6,13 +6,13 @@ function App() {
 
   return (
     <div className='general'>
-    <div className='container'>
-      <Header />
+      <div className='container'>
+        <Header />
+      </div>
+      <div>
+        <CardVideo />
+      </div>
     </div>
-    <div>
-      <CardVideo />
-    </div>
-</div>
   );
 }
 

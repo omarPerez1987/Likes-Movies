@@ -73,7 +73,7 @@ function CardVideo () {
                         <div className='position-like'>
                             <button className="like">❤</button>
                         </div>
-                    <h4 className='song' key={titleApi} >🎬... {titleApi}</h4>
+                    <h4 className="title" key={titleApi} >🎬... {titleApi}</h4>
                 </div>
             </div>
         </div>

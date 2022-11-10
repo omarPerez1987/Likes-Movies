@@ -1,3 +1,13 @@
+
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
 .general {
   background-color: black;
   height: 1920px;
@@ -29,8 +39,8 @@
 
 .container_card {
   background-color: white;
-  height: 560px;
-  width: 320px;
+  height: auto;
+  min-width: 200px;
   border-radius: 20px;
 }
 
@@ -39,7 +49,6 @@
   overflow: hidden;
   margin: 2px 2px;
   border-radius: 20px;
-  /* border: 2px solid red; */
   height: 440px;
   width: auto;
   background-image: none;
@@ -64,6 +73,7 @@
 
 .reverse{
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .forward{
@@ -85,9 +95,9 @@
   font-size: x-large;
   cursor: pointer;
 }
-.song{
-  margin: 3px;
-  border: 2px solid blue;
-  font-size: 12px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+.title{
+  margin: 10px;
+  text-align: center;
+  font-size: 1rem;
 }
+
