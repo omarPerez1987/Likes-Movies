@@ -63,7 +63,9 @@ function CardVideo () {
                         <button onClick={aumentar} className="forward">▶</button>
                         <button className="like">❤</button>
                     </div>
-                    <h4 className="title" key={titleApi} >🎬... {titleApi}</h4>
+                    <div className='containerTitle'>
+                        <h4 className="title" key={titleApi} >🎬... {titleApi}</h4>
+                    </div>
                 </div>
             </div>
         </div>

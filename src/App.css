@@ -152,9 +152,9 @@ a:link, a:visited, a:active {
 }
 .like:hover{
   animation-name: pulse;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    transition: ease-in-out;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
 
 }
 
@@ -164,6 +164,11 @@ a:link, a:visited, a:active {
   50% {scale:1;}
   75% {scale: 1.5;}
   100% {scale: 1;}
+}
+.containerTitle{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 296px;
 }
 
 .title{
