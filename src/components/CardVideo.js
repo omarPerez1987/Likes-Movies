@@ -31,7 +31,7 @@ function CardVideo () {
         const FetchApi = async () => {
             const response = await fetch(url);
             const data = await response.json();
-            
+
             setStateNumber(stateNumber)
             
             let containerVideo = `${data.items[stateNumber].id.videoId}`;
@@ -39,12 +39,11 @@ function CardVideo () {
             
             setVideoApi(containerVideo)
             setTitleApi(containerTitle)
+                    
+            };
+                FetchApi();
+            }, [stateNumber]);
             
-            
-        };
-        FetchApi();
-    }, [stateNumber]);
-        
     return (
         <div>
 
