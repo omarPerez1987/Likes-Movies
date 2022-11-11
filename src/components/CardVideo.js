@@ -11,7 +11,7 @@ function CardVideo () {
     
     
     const resPorPagina = 10;
-    const key = process.env.REACT_APP_API_KEY2;
+    const key = process.env.REACT_APP_API_KEY;
     const idCanal = process.env.REACT_APP_ID_CANAL;
     
     
@@ -19,11 +19,9 @@ function CardVideo () {
     
     
     const disminuir = () => {
-        // setStateArray(stateArray - 1)
         setStateNumber(stateNumber <= 0 ? 9 : stateNumber -1)
     }
     const aumentar = () => {
-        // setStateArray(stateArray + 1)
         setStateNumber(stateNumber >= 9 ? 0 : stateNumber +1)
     }
     
@@ -33,24 +31,19 @@ function CardVideo () {
         const FetchApi = async () => {
             const response = await fetch(url);
             const data = await response.json();
-
-            console.log(data)
             
             setStateNumber(stateNumber)
-            
-            
             
             let containerVideo = `${data.items[stateNumber].id.videoId}`;
             let containerTitle = `${data.items[stateNumber].snippet.title}`
             
             setVideoApi(containerVideo)
             setTitleApi(containerTitle)
-                    
-                    
-                };
-                FetchApi();
-            }, [stateNumber]);
             
+            
+        };
+        FetchApi();
+    }, [stateNumber]);
         
     return (
         <div>
@@ -71,7 +64,6 @@ function CardVideo () {
                         <button onClick={aumentar} className="forward">▶</button>
                         <button className="like">❤</button>
                     </div>
-            
                     <h4 className="title" key={titleApi} >🎬... {titleApi}</h4>
                 </div>
             </div>
