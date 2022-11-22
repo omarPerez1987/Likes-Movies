@@ -177,3 +177,7 @@ a:link, a:visited, a:active {
   font-size: 1rem;
 }
 
+.eventoLike{
+  color: white;
+  text-align: center;
+}
