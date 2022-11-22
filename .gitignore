@@ -26,4 +26,3 @@ yarn-error.log*
 
 # Claves API
 *.env
-.env.production
