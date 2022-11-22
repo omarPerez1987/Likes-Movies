@@ -11,8 +11,8 @@ function CardVideo () {
     
     
     const resPorPagina = 10;
-    const key = process.env.REACT_APP_API_KEY1;
-    const idCanal = process.env.REACT_APP_ID_CANAL;
+    const key = keyApi;     //process.env.REACT_APP_API_KEY1
+    const idCanal = idY;    //process.env.REACT_APP_ID_CANAL
     
     
     const url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${idCanal}&part=snippet,id&order=date&maxResults=${resPorPagina}`
@@ -74,3 +74,71 @@ function CardVideo () {
 }
 
 export default CardVideo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//NO LO USO, I do not use it
+
+const keyApi = 'AIzaSyAP-JUbwMpTQDlLyEgBYB8O9y7uxOZO65o'
+const idY ='UCsbrGZQjM3NiA_eYsguRMNQ'
