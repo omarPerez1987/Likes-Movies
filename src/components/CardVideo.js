@@ -11,7 +11,7 @@ function CardVideo () {
     
     
     const resPorPagina = 10;
-    const key = process.env.REACT_APP_API_KEY3;
+    const key = process.env.REACT_APP_API_KEY1;
     const idCanal = process.env.REACT_APP_ID_CANAL;
     
     
