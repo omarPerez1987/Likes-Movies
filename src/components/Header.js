@@ -8,7 +8,7 @@ function Header() {
                 <img className='logo' alt='logo' src={logoLikes}></img>
             </div>
             <div>
-                <a className='inicio-sesion' href='#'>Inicio sesión</a>
+                <a className='inicio-sesion' href='/'>Inicio sesión</a>
             </div>
         </header>
     )

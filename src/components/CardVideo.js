@@ -52,8 +52,8 @@ function CardVideo () {
                     <div className="video">
 
                         <iframe className='reproductor' src={`https://www.youtube.com/embed/${videoApi}?modestbranding=1&rel=0&showinfo=0&autoplay=1`}
-                        title={titleApi} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                        gyroscope; picture-in-picture" allowfullscreen
+                        title={titleApi} allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture"
                         ></iframe> 
                         
                     </div>
