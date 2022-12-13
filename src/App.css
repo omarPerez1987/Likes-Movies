@@ -10,11 +10,9 @@ a:link, a:visited, a:active {
 }
 
 
-.general {
+body {
   background: url(./components/imagenes/image-fondo.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 1920px;
-  width: 100%;
+  background-position: center center;
 }
