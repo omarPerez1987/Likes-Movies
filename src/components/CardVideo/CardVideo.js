@@ -1,5 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
+import ListLike from '../ListLike/ListLike';
+import './CardVideo.css'
 
 
 function CardVideo () {
@@ -8,11 +10,13 @@ function CardVideo () {
     
     const [videoApi, setVideoApi] = useState()
     const [titleApi, setTitleApi] = useState()
+    const [clic, setClic] = useState(false)
+
     
     
     const resPorPagina = 10;
-    const key = keyApi;     //process.env.REACT_APP_API_KEY1
-    const idCanal = idY;    //process.env.REACT_APP_ID_CANAL
+    const key = process.env.REACT_APP_API_KEY2;
+    const idCanal = process.env.REACT_APP_ID_CANAL;
     
     
     const url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${idCanal}&part=snippet,id&order=date&maxResults=${resPorPagina}`
@@ -21,10 +25,14 @@ function CardVideo () {
     const disminuir = () => {
         setStateNumber(stateNumber <= 0 ? 9 : stateNumber -1)
     }
+
     const aumentar = () => {
         setStateNumber(stateNumber >= 9 ? 0 : stateNumber +1)
     }
-    
+
+    function eventoClick() {
+        setClic(titleApi);
+      }
     
     
     useEffect(() => {
@@ -34,11 +42,8 @@ function CardVideo () {
 
             setStateNumber(stateNumber)
             
-            let containerVideo = `${data.items[stateNumber].id.videoId}`;
-            let containerTitle = `${data.items[stateNumber].snippet.title}`
-            
-            setVideoApi(containerVideo)
-            setTitleApi(containerTitle)
+            setVideoApi(data.items[stateNumber].id.videoId)
+            setTitleApi(data.items[stateNumber].snippet.title)
                     
             };
                 FetchApi();
@@ -61,84 +66,20 @@ function CardVideo () {
                     <div className='position-footer'>
                         <button onClick={disminuir} className="reverse">◀</button>
                         <button onClick={aumentar} className="forward">▶</button>
-                        <button className="like">❤</button>
+                        <button onClick={eventoClick} className="like">❤</button>
                     </div>
                     <div className='containerTitle'>
                         <h4 className="title" key={titleApi} >🎬... {titleApi}</h4>
                     </div>
+
                 </div>
             </div>
+                    <div>
+                        <ListLike titulo={titleApi} clic={clic} />
+                    </div>
         </div>
     )
 
 }
 
 export default CardVideo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//NO LO USO, I do not use it
-
-const keyApi = 'AIzaSyAP-JUbwMpTQDlLyEgBYB8O9y7uxOZO65o'
-const idY ='UCsbrGZQjM3NiA_eYsguRMNQ'

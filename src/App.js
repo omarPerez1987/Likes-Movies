@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/Header';
-import CardVideo from './components/CardVideo';
+import Header from './components/Header/Header';
+import CardVideo from './components/CardVideo/CardVideo';
 
 function App() {
 

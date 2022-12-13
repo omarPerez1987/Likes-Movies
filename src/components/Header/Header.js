@@ -1,5 +1,6 @@
 import React from 'react';
-import logoLikes from './imagenes/logoL&M.png'
+import logoLikes from '../imagenes/logoL&M.png'
+import './Header.css'
 
 function Header() {
     return (
