@@ -1,14 +1,6 @@
-import { useState } from "react";
-import ListLike from "../ListLike/ListLike";
 import "./CardVideo.css";
 
 function CardVideo({ titleApi, videoApi, disminuir, aumentar}) {
-
-    const [clic, setClic] = useState(false);
-
-    function eventoClick() {
-        setClic(titleApi);
-      }
 
   return (
     <section>
@@ -27,7 +19,6 @@ function CardVideo({ titleApi, videoApi, disminuir, aumentar}) {
           <div className="position-footer">
             <button onClick={disminuir} className="reverse">◀</button>
             <button onClick={aumentar} className="forward">▶</button>
-            <button onClick={eventoClick} className="like"> ❤</button>
           </div>
           <div className="containerTitle">
             <h4 className="title">🎬... {titleApi}
@@ -35,7 +26,6 @@ function CardVideo({ titleApi, videoApi, disminuir, aumentar}) {
           </div>
         </div>
       </div>
-      <ListLike clic={clic}/>
     </section>
   );
 }

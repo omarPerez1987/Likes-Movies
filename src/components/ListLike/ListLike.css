@@ -37,8 +37,8 @@ h1 {
     100% {scale: 1;}
   }
   
-  p{
-    font-size: 2em;
+  li{
+    font-size: 1em;
     color: white;
   }
 

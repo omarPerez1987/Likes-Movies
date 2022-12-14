@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import CardVideo from "./components/CardVideo/CardVideo";
+import ListLike from "./components/ListLike/ListLike";
 
 function App() {
   const [stateNumber, setStateNumber] = useState(0);
@@ -17,6 +18,7 @@ function App() {
     const FetchApi = async () => {
       const response = await fetch(url);
       const data = await response.json();
+      console.log(data.items)
 
       setVideoApi(data.items[stateNumber].id.videoId);
       setTitleApi(data.items[stateNumber].snippet.title);
@@ -43,6 +45,11 @@ function App() {
           disminuir={disminuir}
           aumentar={aumentar}
         />
+        <div>
+        <ListLike 
+        titleApi={titleApi}
+        />
+        </div>
       </section>
     </>
   );

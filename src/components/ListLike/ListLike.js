@@ -1,28 +1,37 @@
-
+import { useState, useEffect } from "react";
 import "./ListLike.css";
+import { v4 as uuid } from "uuid";
 
-function ListLike({ titulo, clic }) {
+function ListLike({ titleApi }) {
 
-  let clicLike = clic;
-  let arrayLista = [];
-
-  const guardarLS = () => {
-      arrayLista.push(clicLike);
-      localStorage.setItem("peli", JSON.stringify(arrayLista));
+  
+  const [items, setItems] = useState([]);
+  let idUnico = uuid();
+  
+  // Funcion de crear y guardar en LocalStorage
+  
+  const crearTitulo = () => {
+    const nuevoTitulo = {
+      title: titleApi,
+    };
+    setItems([...items, nuevoTitulo]);
   };
-  guardarLS();
+  useEffect(() => {
+    localStorage.setItem("peli", JSON.stringify(items));
+  }, [items]);
+  
 
-  const mostrarLS = () => {
-    
-  };
 
   return (
     <>
       <div className="divLike">
         <h1>Mi lista</h1>
-        <div className="alert alert-success" role="alert">
-          {arrayLista}
-        </div>
+        <button onClick={crearTitulo}>Guardar</button>
+        <ul>
+          {items.map((item) => (
+            <li key={idUnico}>{item.title}</li>
+          ))}
+        </ul>
       </div>
     </>
   );
