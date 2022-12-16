@@ -36,10 +36,13 @@ h1 {
     75% {scale: 1.5;}
     100% {scale: 1;}
   }
-  
-  li{
-    font-size: 1em;
-    color: white;
+
+  #boxicons {
+    margin-left: 3em;
+    cursor: pointer;
   }
 
+  #guardarLista {
+    margin-bottom: 2em;
+  }
   

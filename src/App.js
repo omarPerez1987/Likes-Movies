@@ -9,7 +9,7 @@ function App() {
   const [titleApi, setTitleApi] = useState();
 
   const resPorPagina = 10;
-  const key = process.env.REACT_APP_API_KEY2;
+  const key = process.env.REACT_APP_API_KEY1;
   const idCanal = process.env.REACT_APP_ID_CANAL;
 
   const url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${idCanal}&part=snippet,id&order=date&maxResults=${resPorPagina}`;
@@ -18,7 +18,6 @@ function App() {
     const FetchApi = async () => {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data.items)
 
       setVideoApi(data.items[stateNumber].id.videoId);
       setTitleApi(data.items[stateNumber].snippet.title);
