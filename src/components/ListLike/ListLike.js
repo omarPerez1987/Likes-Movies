@@ -1,8 +1,10 @@
 import { useState} from "react";
 import "./ListLike.css";
 
-function ListLike({ titleApi }) {
+function ListLike({ titleApi}) {
+
   const [crear, setCrear] = useState([]);
+  
   // const [elimino, setElimino] = useState([]);
 
   //Funcion generar id unico
@@ -36,24 +38,18 @@ const eliminar = (key) => {
   return (
     <>
       <div className="divLike">
-        <h1>Mi lista</h1>
-        <button
-          onClick={crearTitulo}
-          id="guardarLista"
-          type="button"
-          className="btn btn-primary"
-        >Guardar
-        </button>
+
+        <h3>Añadir a mis favoritos</h3>
+          <button id="guardar" onClick={crearTitulo} type="button" className="btn btn-primary">Guardar</button>
 
           {crear.map((item) =>(
             <div 
             key={item.key} 
             className="alert alert-secondary" 
             role="alert">
-              {item.title}
+              {item.title.substring(0, item.title.indexOf("- "))}
 
             <i onClick={() => eliminar(item.key)} 
-            // key={item.key} 
             className='bx bxs-trash' 
             id="boxicons">
             </i>

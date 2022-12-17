@@ -37,18 +37,16 @@ function App() {
 
   return (
     <>
-      <section>
+      <section className="section-general">
+        <ListLike 
+        titleApi={titleApi}
+        />
         <CardVideo
           videoApi={videoApi}
           titleApi={titleApi}
           disminuir={disminuir}
           aumentar={aumentar}
         />
-        <div>
-        <ListLike 
-        titleApi={titleApi}
-        />
-        </div>
       </section>
     </>
   );
